@@ -16,9 +16,9 @@ const puppySchema = new Schema({
     default: 'Grey',
     enum: ['Grey', 'Black', 'Brown', 'White', 'Golden']
   },
-}, {
-  timestamps: true
-})
+},
+  { timestamps: true }
+)
 
 const Puppy = mongoose.model('Puppy', puppySchema)
 
