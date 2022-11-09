@@ -8,8 +8,8 @@ const puppySchema = new Schema({
   breed: { type: String, default: "Mixed" },
   ears: {
     type: String,
-    default: 'Folded',
-    enum: ['Folded', 'Long', 'Pointy']
+    default: 'Button',
+    enum: ['Button', 'Drop', 'Pointy']
   },
   color: {
     type: String,
