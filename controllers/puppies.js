@@ -1,7 +1,13 @@
 import { Puppy } from '../models/puppy.js'
 
 const index = async (req, res) => {
+  const page = req.query.page
+  console.log(page)
+
   const puppy = await Puppy.find({})
+    .limit(8)
+    .skip(parseInt(page) * 8)
+    .sort({ createdAt: 'desc' })
   res.status(200).json(puppy)
 }
 
